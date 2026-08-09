@@ -6,7 +6,26 @@ A classic Snake game — single HTML file, no dependencies, no build tools, just
 
 🎮 **[Play on GitHub Pages](https://LuchoBorbon76.github.io/snake-game/)**
 
-*(Enable GitHub Pages at Settings → Pages → Branch: main / root to activate the link)*
+## Install on Windows
+
+Para instalar el juego localmente en cualquier PC con Windows (sin internet después):
+
+**Opción 1 — Un solo comando** (pegar en PowerShell):
+```powershell
+powershell -ExecutionPolicy Bypass -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/LuchoBorbon76/snake-game/main/install.ps1' -OutFile "$env:TEMP\snake-install.ps1"; & $env:TEMP\snake-install.ps1"
+```
+
+**Opción 2 — Descargar el script manualmente:**
+1. Descargar [`install.ps1`](https://github.com/LuchoBorbon76/snake-game/blob/main/install.ps1)
+2. Clic derecho → **"Run with PowerShell"**
+
+**Qué hace el instalador:**
+- Descarga `index.html` a `%LOCALAPPDATA%\SnakeGame\`
+- Crea acceso directo **"Snake Game"** en el Escritorio
+- Crea `uninstall.ps1` para desinstalar limpiamente
+- Pregunta si querés abrir el juego inmediatamente
+- **No requiere internet después de instalado**
+- **No necesita Node.js, Python ni ningún runtime**
 
 ## Controls
 
@@ -24,7 +43,7 @@ A classic Snake game — single HTML file, no dependencies, no build tools, just
 - ⚡ **Progressive difficulty** — speed increases every 5 points (150ms → 60ms floor)
 - ⏸ **Pause / Resume** with SPACE at any time
 - 🎯 **Anti-reverse** — can't do a 180° turn into yourself
-- 💀 **Accurate collision** — tail-exclusion on self-collision (last segment counts as vacated before the head arrives)
+- 💀 **Accurate collision** — tail-exclusion on self-collision
 - 🎨 **Dark palette** — easy on the eyes, accent-bordered canvas
 - 📱 **Responsive** — scales down for small screens, keeps 1:1 aspect ratio
 
